@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <ul id="photos">
+    <li>列表</li>
+  </ul>
+  
+  <script>
+    
+    var title = 'ok><script>console.log("xss")</script></li><li title="'
+    console.log(title)
+    var img = '<li> <img src="https://imgplaceholder.com/420x320" title="'+title+'"></li>'
+    $('#photos').append(img)
+  </script>
+</body>
+</html>
